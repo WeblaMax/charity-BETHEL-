@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-label="BETHEL – Poarta Cerului">
+  <!-- Logo simplificat: două porți grafit, crucea aurie, drumul șerpuit și norii conturați. -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B8823A"/><stop offset="1" stop-color="#E3B873"/>
+    </linearGradient>
+  </defs>
+  <!-- raze -->
+  <g stroke="url(#g)" stroke-width="1" stroke-linecap="round" opacity=".7">
+    <path d="M60 40 L60 4"/><path d="M60 40 L34 10"/><path d="M60 40 L86 10"/>
+    <path d="M60 40 L18 28"/><path d="M60 40 L102 28"/>
+  </g>
+  <!-- porți -->
+  <g fill="#1F2328">
+    <rect x="12" y="44" width="40" height="70" rx="2"/>
+    <rect x="68" y="44" width="40" height="70" rx="2"/>
+  </g>
+  <g stroke="#FBF8F2" stroke-width="1.6" opacity=".9">
+    <path d="M20 50V112M28 50V112M36 50V112M44 50V112"/>
+    <path d="M76 50V112M84 50V112M92 50V112M100 50V112"/>
+  </g>
+  <!-- cruce -->
+  <path fill="url(#g)" d="M57.5 18h5v11h11v5h-11v30h-5V34h-11v-5h11z"/>
+  <!-- drum -->
+  <path d="M60 66C52 78 70 86 60 98S50 112 60 124" fill="none" stroke="url(#g)" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- nori -->
+  <g fill="none" stroke="url(#g)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 126q4-12 16-8q4-10 16-4q8-6 14 4q8-2 8 8z"/>
+    <path d="M114 126q-4-12-16-8q-4-10-16-4q-8-6-14 4q-8-2-8 8z"/>
+    <path d="M30 132q10-8 20-2q10-8 20 0q10-6 20 2"/>
+  </g>
+</svg>

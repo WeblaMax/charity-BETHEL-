@@ -39,7 +39,6 @@ window.BETHEL = {
     iban: "MD00 XX00 0000 0000 0000 0000",  // EXEMPLU – înlocuiește cu IBAN-ul real
     banca: "Numele băncii",                 // EXEMPLU
     codBanca: "",                           // cod SWIFT/BIC, dacă vrei să-l afișezi
-    qr: "",                                 // ex. "images/qr-donatie.webp" – când e gol se afișează un loc rezervat
 
     /* Date juridice (footer) */
     juridic: {

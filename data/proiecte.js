@@ -100,18 +100,18 @@ window.BETHEL = {
         alt: "Copiii familiei în fața casei (fețe blurate)"
       },
       {
-        eticheta: "Înainte",
-        titlu: "O familie și o casă care aștepta ajutor",
-        text: "Casa familiei avea nevoie de ajutor ca să devină cu adevărat un loc cald, sigur și îngrijit pentru copii.",
-        img: "pas-inainte.webp",
-        alt: "Una dintre camerele casei familiei"
-      },
-      {
         eticheta: "Lucrările",
         titlu: "Mâini multe, o singură inimă",
         text: "Voluntari, meșteri și donatori s-au adunat la același șantier. Fiecare a dat ce a avut: bani, materiale, timp, o vorbă bună.",
         img: "lucrari.webp",
         alt: "Tavan nou din plăci OSB, în timpul lucrărilor"
+      },
+      {
+        eticheta: "Înainte",
+        titlu: "O familie și o casă care aștepta ajutor",
+        text: "Casa familiei avea nevoie de ajutor ca să devină cu adevărat un loc cald, sigur și îngrijit pentru copii.",
+        img: "pas-inainte.webp",
+        alt: "Una dintre camerele casei familiei"
       },
       {
         eticheta: "După",

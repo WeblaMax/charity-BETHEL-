@@ -300,13 +300,14 @@ window.BETHEL = {
       slug: "paine-batrani",
       titlu: "Pâine în fiecare miercuri",
       categorii: ["hrana", "familii"],
-      scurt: "Pâine caldă, împărțită în fiecare miercuri la peste 400 de familii.",
+      scurt: "Pâine caldă, împărțită cu triciclete electrice în fiecare miercuri, la peste 400 de familii.",
       data: "",
       localitate: "",
       beneficiari: null,
       beneficiariText: "familii",
       poveste: [
         "În fiecare miercuri împărțim pâine la peste 400 de familii.",
+        "Pâinea ajunge la oameni cu ajutorul tricicletelor electrice, care fac parte din proiect: cu ele împărțim pâinea în localitate, de la poartă la poartă.",
         "Pe lângă pâine, ducem și o vorbă bună oamenilor care au nevoie."
       ],
       coperta: "01.webp",
@@ -315,7 +316,9 @@ window.BETHEL = {
         { f: "02.webp", alt: "O mamă și fetița ei, cu pâinea primită (fața copilului blurată)" },
         { f: "03.webp", alt: "O femeie zâmbind, cu trei pâini în brațe" },
         { f: "04.webp", alt: "O bătrână strânge la piept pâinea primită" },
-        { f: "05.webp", alt: "Un om în vârstă cu pâinea primită, pe uliță" }
+        { f: "05.webp", alt: "Un om în vârstă cu pâinea primită, pe uliță" },
+        { f: "06.webp", alt: "Cele două triciclete electrice cu care împărțim pâinea" },
+        { f: "07.webp", alt: "Un om cu dizabilități primește o pâine proaspătă" }
       ]
     },
 

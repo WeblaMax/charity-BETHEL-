@@ -225,15 +225,16 @@
   function initCounters() {
     var ul = $('#counters'); if (!ul) return;
     ul.innerHTML = D.contoare.map(function (c) {
-      return '<li class="counter"><span class="counter__num" data-target="' + c.valoare + '">' + fmt(c.valoare) + '</span><span class="counter__label">' + esc(c.eticheta) + '</span></li>';
+      return '<li class="counter"><span class="counter__num" data-target="' + c.valoare + '" data-suffix="' + esc(c.sufix || '') + '">' + fmt(c.valoare) + (c.sufix ? esc(c.sufix) : '') + '</span><span class="counter__label">' + esc(c.eticheta) + '</span></li>';
     }).join('');
     if (!canAnimate) return;
     $$('.counter__num', ul).forEach(function (n) {
       var target = +n.getAttribute('data-target'), o = { v: 0 };
-      n.textContent = '0';
+      var sfx = n.getAttribute('data-suffix') || '';
+      n.textContent = '0' + sfx;
       ScrollTrigger.create({
         trigger: n, start: 'top 90%', once: true,
-        onEnter: function () { gsap.to(o, { v: target, duration: 2.2, ease: 'power2.out', onUpdate: function () { n.textContent = fmt(o.v); } }); }
+        onEnter: function () { gsap.to(o, { v: target, duration: 2.2, ease: 'power2.out', onUpdate: function () { n.textContent = fmt(o.v) + sfx; } }); }
       });
     });
   }

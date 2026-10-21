@@ -311,7 +311,11 @@ window.BETHEL = {
       ],
       coperta: "01.webp",
       galerie: [
-        { f: "01.webp", alt: "Fotografie în curând" }
+        { f: "01.webp", alt: "O femeie primește pâine caldă" },
+        { f: "02.webp", alt: "O mamă și fetița ei, cu pâinea primită (fața copilului blurată)" },
+        { f: "03.webp", alt: "O femeie zâmbind, cu trei pâini în brațe" },
+        { f: "04.webp", alt: "O bătrână strânge la piept pâinea primită" },
+        { f: "05.webp", alt: "Un om în vârstă cu pâinea primită, pe uliță" }
       ]
     },
 

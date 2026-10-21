@@ -336,7 +336,7 @@ window.BETHEL = {
       ],
       coperta: "01.webp",
       galerie: [
-        { f: "01.webp", alt: "Fotografie în curând" }
+        { f: "01.webp", alt: "Saci cu cartofi, stivuiți și pregătiți pentru distribuire" }
       ]
     },
 

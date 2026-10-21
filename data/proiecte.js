@@ -310,14 +310,14 @@ window.BETHEL = {
         "Pâinea ajunge la oameni cu ajutorul tricicletelor electrice, care fac parte din proiect: cu ele împărțim pâinea în localitate, de la poartă la poartă.",
         "Pe lângă pâine, ducem și o vorbă bună oamenilor care au nevoie."
       ],
-      coperta: "01.webp",
+      coperta: "06.webp",
       galerie: [
-        { f: "01.webp", alt: "O femeie primește pâine caldă" },
+        { f: "06.webp", alt: "Cele două triciclete electrice cu care împărțim pâinea" },
         { f: "02.webp", alt: "O mamă și fetița ei, cu pâinea primită (fața copilului blurată)" },
         { f: "03.webp", alt: "O femeie zâmbind, cu trei pâini în brațe" },
         { f: "04.webp", alt: "O bătrână strânge la piept pâinea primită" },
         { f: "05.webp", alt: "Un om în vârstă cu pâinea primită, pe uliță" },
-        { f: "06.webp", alt: "Cele două triciclete electrice cu care împărțim pâinea" },
+        { f: "01.webp", alt: "O femeie primește pâine caldă" },
         { f: "07.webp", alt: "Un om cu dizabilități primește o pâine proaspătă" }
       ]
     },

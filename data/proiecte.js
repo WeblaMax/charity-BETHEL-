@@ -252,7 +252,10 @@ window.BETHEL = {
         { f: "02.webp", alt: "Grupul de mandolină și chitară, la un eveniment de Crăciun" },
         { f: "03.webp", alt: "Două eleve exersează la mandolină, cu caietele de note" },
         { f: "04.webp", alt: "Doi elevi la lecția de chitară" },
-        { f: "05.webp", alt: "O elevă cu mandolina" }
+        { f: "05.webp", alt: "O elevă cu mandolina" },
+        { f: "06.webp", alt: "Un elev cu mandolina, la lecție" },
+        { f: "07.webp", alt: "O elevă exersează la mandolină" },
+        { f: "08.webp", alt: "O elevă concentrată pe acordurile de la mandolină" }
       ]
     },
 

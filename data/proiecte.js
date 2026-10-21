@@ -178,12 +178,16 @@ window.BETHEL = {
       ],
       coperta: "01.webp",
       galerie: [
-        { f: "01.webp", alt: "Copii primind cadouri de Crăciun" },
-        { f: "02.webp", alt: "Voluntari pregătind pachetele de Crăciun" },
-        { f: "03.webp", alt: "Pachete de Crăciun aranjate pe masă" },
-        { f: "04.webp", alt: "Un copil deschide un cadou" },
-        { f: "05.webp", alt: "Colindători și copii în jurul bradului" },
-        { f: "06.webp", alt: "Familie primind vizita voluntarilor" }
+        { f: "01.webp", alt: "Copii și voluntari cu pachetele de Crăciun, pe scena sălii" },
+        { f: "02.webp", alt: "Grupul de copii din sat, cu pachetele primite, în curtea școlii" },
+        { f: "03.webp", alt: "Copii ridicând fericiți cutiile cu daruri" },
+        { f: "04.webp", alt: "Un voluntar oferă un pachet unui băiat, într-o sală plină de copii" },
+        { f: "05.webp", alt: "Un voluntar împarte pachetele de Crăciun copiilor așezați pe scaune" },
+        { f: "06.webp", alt: "Copii în sală, curioși, primind pachetele" },
+        { f: "07.webp", alt: "Doi băieți răsfoiesc cărțile primite în pachet" },
+        { f: "08.webp", alt: "Copii deschizând împreună cutiile de Crăciun" },
+        { f: "09.webp", alt: "Oameni primind dulciuri și pachete la intrare" },
+        { f: "10.webp", alt: "O fetiță cu punga ei de Crăciun" }
       ]
     },
 

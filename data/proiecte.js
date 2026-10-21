@@ -234,6 +234,29 @@ window.BETHEL = {
     },
 
     {
+      slug: "cursuri-muzica",
+      titlu: "Cursuri de mandolină și chitară",
+      categorii: ["educatie", "copii"],
+      scurt: "Copiii învață să cânte la mandolină și chitară – un dar care rămâne pentru toată viața.",
+      data: "",
+      localitate: "",
+      beneficiari: null,
+      beneficiariText: "elevi",
+      poveste: [
+        "Muzica deschide uși. În cursurile noastre, copiii învață mandolina și chitara, descoperă disciplina frumoasă a exercițiului și cântă împreună, la biserică și la evenimentele comunității.",
+        "Vrem ca fiecare copil să aibă șansa de a învăța ceva ce nu i-a putut oferi, până acum, nici familia, nici școala."
+      ],
+      coperta: "01.webp",
+      galerie: [
+        { f: "01.webp", alt: "Orchestra de mandoline la o repetiție, cu publicul în sală" },
+        { f: "02.webp", alt: "Grupul de mandolină și chitară, la un eveniment de Crăciun" },
+        { f: "03.webp", alt: "Două eleve exersează la mandolină, cu caietele de note" },
+        { f: "04.webp", alt: "Doi elevi la lecția de chitară" },
+        { f: "05.webp", alt: "O elevă cu mandolina" }
+      ]
+    },
+
+    {
       slug: "ghiozdane",
       titlu: "Ghiozdane pentru 15 familii vulnerabile",
       categorii: ["copii", "familii", "educatie"],

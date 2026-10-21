@@ -100,13 +100,6 @@ window.BETHEL = {
         alt: "Copiii familiei în fața casei (fețe blurate)"
       },
       {
-        eticheta: "Înainte",
-        titlu: "O familie și o casă care aștepta ajutor",
-        text: "Casa familiei avea nevoie urgentă de reparații: pereți și tavan vechi, o locuință greu de ținut caldă și îngrijită pentru copii.",
-        img: "inainte-2.webp",
-        alt: "Una dintre camerele casei, înainte de reparații"
-      },
-      {
         eticheta: "Lucrările",
         titlu: "Mâini multe, o singură inimă",
         text: "Voluntari, meșteri și donatori s-au adunat la același șantier. Fiecare a dat ce a avut: bani, materiale, timp, o vorbă bună.",
@@ -114,9 +107,17 @@ window.BETHEL = {
         alt: "Tavan nou din plăci OSB, în timpul lucrărilor"
       },
       {
+        eticheta: "Înainte și după",
+        titlu: "O cameră cu totul nouă",
+        text: "Trage de mijloc ca să vezi diferența: tavan și pereți refăcuți, tapet nou, o încăpere curată și caldă.",
+        img: "camera-dupa.webp",
+        alt: "Camera după renovare",
+        compara: { inainte: "inainte-2.webp", altInainte: "Camera înainte de renovare", altDupa: "Camera după renovare" }
+      },
+      {
         eticheta: "După",
         titlu: "Un cămin cald și sigur",
-        text: "Trage de mijloc ca să vezi diferența. Aceeași cameră: pereți netezi, tavan nou și o lumină care chiar încălzește.",
+        text: "Încă o cameră, aceeași poveste: pereți netezi, tavan nou și o lumină care chiar încălzește.",
         img: "dupa.webp",
         alt: "Aceeași cameră după renovare",
         compara: { inainte: "inainte.webp", altInainte: "Camera înainte de renovare", altDupa: "Camera după renovare" }

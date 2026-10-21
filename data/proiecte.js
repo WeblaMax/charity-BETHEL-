@@ -22,11 +22,12 @@ window.BETHEL = {
   /* ---------- Datele asociației (apar în contact, footer, donații) ---------- */
   org: {
     nume: "BETHEL – Poarta Cerului",
-    numeComplet: "Asociația Obștească „BETHEL – Poarta Cerului”",
+    numeComplet: "Asociația Obștească „Bethel – Poarta Cerului”",
+    fondare: "Asociația a fost înființată în 2022 de Cojocari Victor, Cojocari Iosif și Rusu Laric.",
     tara: "Republica Moldova",
-    telefon: "+373 000 00 000",            // EXEMPLU
-    telefonHref: "+37300000000",            // fără spații, pentru legătura tel:
-    email: "contact@exemplu.md",            // EXEMPLU
+    telefon: "+373 76 712 725",
+    telefonHref: "+37376712725",             // fără spații, pentru legătura tel:
+    email: "rusularic@gmail.com",
     adresa: "Strada Exemplu 1, Chișinău, Republica Moldova", // EXEMPLU
     sociale: {                              // lasă "" pentru a ascunde o rețea
       facebook: "https://www.facebook.com/",
@@ -35,31 +36,29 @@ window.BETHEL = {
     },
 
     /* Donații */
-    beneficiar: "Asociația Obștească „BETHEL – Poarta Cerului”",
-    iban: "MD00 XX00 0000 0000 0000 0000",  // EXEMPLU – înlocuiește cu IBAN-ul real
-    banca: "Numele băncii",                 // EXEMPLU
-    codBanca: "",                           // cod SWIFT/BIC, dacă vrei să-l afișezi
+    beneficiar: "AO BETHEL-POARTA CERULUI",
+    iban: "MD93 AG00 0000 0225 1524 7125",
+    banca: "Moldova Agroindbank",
+    codBanca: "AGRNMD2X",                      // cod SWIFT/BIC
 
     /* Date juridice (footer) */
     juridic: {
-      idno: "",                             // cod fiscal (IDNO)
+      idno: "1022620012754",                  // cod fiscal (IDNO)
       inregistrare: "",                     // ex. „Înregistrată la Ministerul Justiției, nr. …, din …”
       adresaJuridica: ""
     },
 
-    /* Formularul de voluntari.
-       - Dacă lași gol, formularul deschide aplicația de e-mail a vizitatorului (mailto:).
-       - Dacă pui un endpoint (ex. Formspree: "https://formspree.io/f/xxxxxxx"), mesajul se trimite direct. */
+    /* Formularul de voluntari se trimite pe WhatsApp, la numărul de telefon de mai sus. */
     formularEndpoint: ""
   },
 
   /* ---------- Contoare animate (secțiunea „În cifre”) ---------- */
-  contoare: [                               // EXEMPLU – completează cu cifre reale
-    { valoare: 120, eticheta: "copii ajutați" },
-    { valoare: 85,  eticheta: "bătrâni sprijiniți" },
-    { valoare: 1500, eticheta: "pungi cu alimente" },
-    { valoare: 20000, eticheta: "pâini distribuite" },
-    { valoare: 40,  eticheta: "voluntari" }
+  contoare: [
+    { valoare: 4,   eticheta: "tabere pentru copii" },
+    { valoare: 400, sufix: "+", eticheta: "familii primesc pâine în fiecare miercuri" },
+    { valoare: 120, eticheta: "familii au primit saci cu cartofi" },
+    { valoare: 3,   eticheta: "biserici construite" },
+    { valoare: 220, sufix: " m", eticheta: "de drum amenajat în Sălcuța Nouă" }
   ],
 
   /* ---------- Categorii (filtrele de pe pagina „Proiecte”) ---------- */
@@ -68,7 +67,8 @@ window.BETHEL = {
     { id: "batrani",   nume: "Bătrâni" },
     { id: "familii",   nume: "Familii" },
     { id: "hrana",     nume: "Hrană" },
-    { id: "educatie",  nume: "Educație" }
+    { id: "educatie",  nume: "Educație" },
+    { id: "comunitate", nume: "Comunitate" }
   ],
 
   /* ---------- Transparență ---------- */
@@ -87,37 +87,37 @@ window.BETHEL = {
   poveste: {
     proiect: "casa-renovata",               // folderul cu pozele: images/proiecte/casa-renovata/
     eticheta: "Poveste din inima noastră",
-    titlu: "O casă pentru patru copii și o mamă care nu s-a dat bătută",
+    titlu: "O casă care a primit o nouă șansă",
     pasi: [
+      {
+        eticheta: "Familia",
+        titlu: "Pentru ei a fost făcut totul",
+        text: "Copiii familiei, în fața casei. Le protejăm fețele, dar bucuria se vede.",
+        img: "familia.webp",
+        alt: "Copiii familiei în fața casei (fețe blurate)"
+      },
       {
         eticheta: "Înainte",
         titlu: "O familie și o casă care aștepta ajutor",
-        text: "O mamă își crește singură cei patru copii. Casa în care locuiau avea nevoie urgentă de reparații, iar puterile unui singur om nu ajungeau.",
-        img: "inainte.webp",
-        alt: "Casa familiei înainte de renovare"
+        text: "Casa familiei avea nevoie urgentă de reparații: pereți și tavan vechi, o locuință greu de ținut caldă și îngrijită pentru copii.",
+        img: "inainte-2.webp",
+        alt: "Una dintre camerele casei, înainte de reparații"
       },
       {
-        eticheta: "Lucrările",
+        eticheta: "Înainte și după",
         titlu: "Mâini multe, o singură inimă",
-        text: "Voluntari, meșteri și donatori s-au adunat la aceeași masă și la același șantier. Fiecare a dat ce a avut: bani, materiale, timp, o vorbă bună.",
-        img: "lucrari.webp",
-        alt: "Voluntari lucrând la renovarea casei"
+        text: "Voluntari, meșteri și donatori s-au adunat la același șantier. Trage de mijloc ca să vezi diferența: de la tavanul în lucru, la o cameră curată și caldă.",
+        img: "camera-dupa.webp",
+        alt: "Camera după renovare",
+        compara: { inainte: "lucrari.webp", altInainte: "Tavan nou din plăci OSB, în timpul lucrărilor", altDupa: "Camera după renovare" }
       },
       {
         eticheta: "După",
         titlu: "Un cămin cald și sigur",
-        text: "Trage de mijloc ca să vezi diferența. Acolo unde era grijă, acum e liniște, lumină și loc pentru jocurile copiilor.",
+        text: "Încă o cameră, aceeași poveste: pereți netezi, tavan nou și o lumină care chiar încălzește.",
         img: "dupa.webp",
-        alt: "Casa familiei după renovare",
-        compara: { inainte: "inainte.webp", altInainte: "Casa înainte de renovare", altDupa: "Casa după renovare" }
-      },
-      {
-        eticheta: "Mesajul familiei",
-        titlu: "În cuvintele lor",
-        citat: "[Mesajul familiei – de completat cu cuvintele lor, cu acordul lor]", // EXEMPLU
-        semnatura: "",                      // ex. „– Mama și cei patru copii”
-        img: "familia.webp",
-        alt: "Familia în fața casei renovate"
+        alt: "Aceeași cameră după renovare",
+        compara: { inainte: "inainte.webp", altInainte: "Camera înainte de renovare", altDupa: "Camera după renovare" }
       }
     ]
   },
@@ -142,23 +142,20 @@ window.BETHEL = {
       slug: "tabere-copii",
       titlu: "Tabere pentru copii",
       categorii: ["copii"],
-      scurt: "Zile de joc, prietenie și credință pentru copiii care rareori pleacă de acasă.",
+      scurt: "Patru tabere, în patru sate: Coșcalia, Baimaclia, Ciuflești și Carnațenii Noi.",
       data: "",
       localitate: "",
       beneficiari: null,
       beneficiariText: "copii",
       poveste: [
-        "Pentru mulți copii din familii cu venituri mici, vacanța înseamnă să stea acasă. Taberele BETHEL le oferă o săptămână de aer curat, jocuri, cântece, prietenii noi și clipe de rugăciune în care se simt așteptați și iubiți.",
-        "Fiecare tabără este pregătită cu grijă de voluntari: program, mese calde, activități creative și multă răbdare. Nu cerem nimic în schimb – doar bucuria de a-i vedea zâmbind."
+        "Am organizat patru tabere pentru copii, în patru sate: Coșcalia (60 de copii), Baimaclia (80–90 de copii), Ciuflești (80–90 de copii) și Carnațenii Noi (90–100 de copii).",
+        "Zile de joc, prietenie și credință pentru copiii care rareori au ocazia să facă așa ceva."
       ],
       coperta: "01.webp",
       galerie: [
         { f: "01.webp", alt: "Copii zâmbind în timpul unei activități în tabără" },
         { f: "02.webp", alt: "Joc în aer liber cu copiii din tabără" },
-        { f: "03.webp", alt: "Copii și voluntari la masă" },
-        { f: "04.webp", alt: "Activitate creativă în tabără" },
-        { f: "05.webp", alt: "Cântec în cerc, seara" },
-        { f: "06.webp", alt: "Grupul taberei, împreună" }
+        { f: "03.webp", alt: "Grupul taberei, împreună" }
       ]
     },
 
@@ -166,96 +163,71 @@ window.BETHEL = {
       slug: "cadouri-craciun",
       titlu: "Cadouri de Crăciun",
       categorii: ["copii", "familii"],
-      scurt: "Un pachet cu dulciuri și daruri, pentru ca niciun copil să nu simtă că a fost uitat de sărbători.",
+      scurt: "Pachete de Crăciun pentru copiii din școlile satelor în care lucrăm.",
       data: "",
       localitate: "",
       beneficiari: null,
       beneficiariText: "copii",
       poveste: [
-        "În fiecare iarnă pregătim pachete de Crăciun pentru copiii din familii vulnerabile. Donatori și voluntari aleg împreună dulciuri, jucării, haine groase și, mai ales, un bilet scris de mână.",
-        "Pachetele ajung la copii acasă sau la un mic eveniment al comunității, unde sărbătoarea se simte ca o familie mare."
+        "În fiecare iarnă ducem cadouri de Crăciun copiilor de la școlile din satele în care lucrăm. Donatori și voluntari pregătesc pachetele, iar copiii le deschid împreună, în sala școlii.",
+        "Pentru mulți dintre ei, e cel mai așteptat moment al iernii."
       ],
       coperta: "01.webp",
       galerie: [
-        { f: "01.webp", alt: "Copii primind cadouri de Crăciun" },
-        { f: "02.webp", alt: "Voluntari pregătind pachetele de Crăciun" },
-        { f: "03.webp", alt: "Pachete de Crăciun aranjate pe masă" },
-        { f: "04.webp", alt: "Un copil deschide un cadou" },
-        { f: "05.webp", alt: "Colindători și copii în jurul bradului" },
-        { f: "06.webp", alt: "Familie primind vizita voluntarilor" }
+        { f: "01.webp", alt: "Copii și voluntari cu pachetele de Crăciun, pe scena sălii" },
+        { f: "02.webp", alt: "Grupul de copii din sat, cu pachetele primite, în curtea școlii" },
+        { f: "03.webp", alt: "Copii ridicând fericiți cutiile cu daruri" },
+        { f: "04.webp", alt: "Un voluntar oferă un pachet unui băiat, într-o sală plină de copii" },
+        { f: "05.webp", alt: "Un voluntar împarte pachetele de Crăciun copiilor așezați pe scaune" },
+        { f: "06.webp", alt: "Copii în sală, curioși, primind pachetele" },
+        { f: "07.webp", alt: "Doi băieți răsfoiesc cărțile primite în pachet" },
+        { f: "08.webp", alt: "Copii deschizând împreună cutiile de Crăciun" },
+        { f: "09.webp", alt: "Oameni primind dulciuri și pachete la intrare" },
+        { f: "10.webp", alt: "O fetiță cu punga ei de Crăciun" }
       ]
     },
 
     {
-      slug: "paine-batrani",
-      titlu: "Pâine pentru bătrâni",
-      categorii: ["batrani", "hrana"],
-      scurt: "Pâine caldă și o vorbă bună la ușa oamenilor în vârstă care trăiesc singuri.",
+      slug: "dotari-scoala",
+      titlu: "Televizoare și cărți pentru școala din Carnațenii Noi",
+      categorii: ["educatie"],
+      scurt: "Televizoare de 2.500 $ și cărți de 100 $, cumpărate pentru elevii școlii din Carnațenii Noi.",
       data: "",
       localitate: "",
       beneficiari: null,
-      beneficiariText: "bătrâni",
+      beneficiariText: "elevi",
       poveste: [
-        "Pentru un om în vârstă care trăiește singur, o pâine caldă înseamnă mai mult decât hrană: înseamnă că cineva s-a gândit la el. Voluntarii noștri bat la ușă, se așază pentru câteva minute și întreabă cum se simt.",
-        "De multe ori, conversația e darul cel mai mare. Păstrăm legătura cu fiecare om și încercăm să-l ajutăm și cu alte nevoi, atunci când ni le spune."
+        "Pentru școala din Carnațenii Noi am cumpărat televizoare în valoare de 2.500 $, ca elevii să învețe în condiții mai bune.",
+        "Tot pentru școală am cumpărat cărți în valoare de 100 $."
       ],
       coperta: "01.webp",
       galerie: [
-        { f: "01.webp", alt: "Voluntar oferind pâine unei bătrâne zâmbitoare" },
-        { f: "02.webp", alt: "Pâini proaspete pregătite pentru distribuire" },
-        { f: "03.webp", alt: "Vizită la poarta unui bătrân" },
-        { f: "04.webp", alt: "Conversație caldă pe prispa casei" },
-        { f: "05.webp", alt: "Voluntarii încarcă pâinea în mașină" },
-        { f: "06.webp", alt: "Bătrân primind pâine și un zâmbet" }
+        { f: "01.webp", alt: "Fotografie în curând" }
       ]
     },
 
     {
       slug: "casa-renovata",
-      titlu: "Casă renovată pentru o familie cu 4 copii",
+      titlu: "Casă renovată pentru o familie vulnerabilă",
       categorii: ["familii", "copii"],
-      scurt: "O mamă singură și patru copii au primit un cămin reparat și cald, cu ajutorul a zeci de oameni.",
-      data: "",
-      localitate: "",
-      beneficiari: 5,
-      beneficiariText: "persoane (o mamă și 4 copii)",
-      poveste: [
-        "O mamă își crește singură patru copii într-o casă care avea nevoie urgentă de reparații. Nu ceruse nimic; noi am aflat de la vecini și am mers s-o cunoaștem.",
-        "Împreună cu voluntari, meșteri și donatori am renovat casa pas cu pas, încercând ca familia să rămână în centrul tuturor deciziilor. Rezultatul e un cămin sigur, luminos și cald, în care copiii pot crește liniștiți.",
-        "Povestea completă, cu înainte și după, o găsești și pe prima pagină."
-      ],
-      coperta: "dupa.webp",
-      galerie: [
-        { f: "inainte.webp", alt: "Casa înainte de renovare" },
-        { f: "lucrari.webp", alt: "Voluntari lucrând la casă" },
-        { f: "lucrari-2.webp", alt: "Meșteri și voluntari, împreună pe șantier" },
-        { f: "dupa.webp", alt: "Casa după renovare" },
-        { f: "interior.webp", alt: "Interiorul renovat" },
-        { f: "familia.webp", alt: "Familia în fața casei renovate" }
-      ]
-    },
-
-    {
-      slug: "triciclete-paine",
-      titlu: "Două triciclete pentru distribuirea pâinii prin sate",
-      categorii: ["hrana", "batrani"],
-      scurt: "Două triciclete cu bagaj ajung acolo unde mașina nu poate: pe ulițele satelor, la ușa oamenilor.",
+      scurt: "Reparații la casa unei familii vulnerabile, cu ajutorul voluntarilor și al donatorilor.",
       data: "",
       localitate: "",
       beneficiari: null,
-      beneficiariText: "oameni",
+      beneficiariText: "familie",
       poveste: [
-        "Multe case din sate sunt departe de drumul mare. Cu două triciclete cu bagaj, voluntarii noștri pot duce pâinea până la poarta fiecărui om, fără costuri de combustibil și fără grabă.",
-        "Tricicletele au fost cumpărate din donații și poartă, pe lângă pâine, vestea că nimeni nu e uitat."
+        "Am renovat casa unei familii vulnerabile, cu ajutorul voluntarilor și al donatorilor.",
+        "În galerie vezi camerele înainte și după reparații și familia, cu fețele copiilor protejate."
       ],
-      coperta: "01.webp",
+      coperta: "dupa.webp",
       galerie: [
-        { f: "01.webp", alt: "Cele două triciclete încărcate cu pâine" },
-        { f: "02.webp", alt: "Voluntar pe tricicletă, pe o uliță de sat" },
-        { f: "03.webp", alt: "Predarea pâinii la poartă" },
-        { f: "04.webp", alt: "Triciclete și voluntari, înaintea plecării" },
-        { f: "05.webp", alt: "Pâine proaspătă în cutiile de transport" },
-        { f: "06.webp", alt: "Întâlnire cu sătenii" }
+        { f: "inainte.webp", alt: "Camera înainte de reparații" },
+        { f: "dupa.webp", alt: "Aceeași cameră, după renovare" },
+        { f: "inainte-2.webp", alt: "Altă cameră a casei, înainte de reparații" },
+        { f: "dupa-2.webp", alt: "Camera renovată, cu tapet nou și tavan nou" },
+        { f: "inainte-3.webp", alt: "Tavanul din plăci OSB, în timpul lucrărilor" },
+        { f: "dupa-3.webp", alt: "Colț al camerei, după renovare" },
+        { f: "familia.webp", alt: "Copiii familiei, în fața casei (fețe blurate)" }
       ]
     },
 
@@ -269,89 +241,212 @@ window.BETHEL = {
       beneficiari: null,
       beneficiariText: "elevi",
       poveste: [
-        "Muzica deschide uși. În cursurile noastre gratuite, copiii învață mandolina și chitara, descoperă disciplina frumoasă a exercițiului și cântă împreună, la biserică și la evenimentele comunității.",
+        "Muzica deschide uși. În cursurile noastre, copiii învață mandolina și chitara, descoperă disciplina frumoasă a exercițiului și cântă împreună, la biserică și la evenimentele comunității.",
         "Vrem ca fiecare copil să aibă șansa de a învăța ceva ce nu i-a putut oferi, până acum, nici familia, nici școala."
       ],
       coperta: "01.webp",
       galerie: [
-        { f: "01.webp", alt: "Elevi la o oră de chitară" },
-        { f: "02.webp", alt: "Profesorul arată o poziție la mandolină" },
-        { f: "03.webp", alt: "Copii cântând împreună" },
-        { f: "04.webp", alt: "Mandoline și chitare pregătite pentru lecție" },
-        { f: "05.webp", alt: "Un mic concert al elevilor" },
-        { f: "06.webp", alt: "Elevii și profesorii, după concert" }
+        { f: "01.webp", alt: "Orchestra de mandoline la o repetiție, cu publicul în sală" },
+        { f: "02.webp", alt: "Grupul de mandolină și chitară, la un eveniment de Crăciun" },
+        { f: "03.webp", alt: "Două eleve exersează la mandolină, cu caietele de note" },
+        { f: "04.webp", alt: "Doi elevi la lecția de chitară" },
+        { f: "05.webp", alt: "O elevă cu mandolina" },
+        { f: "06.webp", alt: "Un elev cu mandolina, la lecție" },
+        { f: "07.webp", alt: "O elevă exersează la mandolină" },
+        { f: "08.webp", alt: "O elevă concentrată pe acordurile de la mandolină" }
+      ]
+    },
+
+    {
+      slug: "ghiozdane",
+      titlu: "Ghiozdane pentru 15 familii vulnerabile",
+      categorii: ["copii", "familii", "educatie"],
+      scurt: "Ghiozdane noi, pentru ca niciun copil să nu înceapă școala fără.",
+      data: "",
+      localitate: "",
+      beneficiari: 15,
+      beneficiariText: "familii",
+      poveste: [
+        "Am oferit ghiozdane copiilor din 15 familii vulnerabile, pentru începutul anului școlar."
+      ],
+      coperta: "01.webp",
+      galerie: [
+        { f: "01.webp", alt: "Fotografie în curând" }
       ]
     },
 
     {
       slug: "pungi-alimente",
-      titlu: "Pungi cu alimente pentru familii nevoiașe",
+      titlu: "Pachete pentru familii vulnerabile și persoane cu dizabilități",
       categorii: ["hrana", "familii"],
-      scurt: "Pungi cu produse de bază, pregătite cu grijă și duse direct în familiile care au nevoie.",
+      scurt: "Pachete duse direct, în 70–80 de familii vulnerabile și la oameni cu dizabilități.",
       data: "",
       localitate: "",
       beneficiari: null,
       beneficiariText: "familii",
       poveste: [
-        "Făină, ulei, zahăr, cereale, conserve: un pachet simplu poate liniști o familie pentru câteva săptămâni. Donatorii cumpără, voluntarii împachetează, iar noi ducem pungile personal, în fiecare familie.",
-        "Încercăm să păstrăm legătura cu familiile și să ne interesăm și de alte nevoi, cu discreție și respect."
+        "Am dus pachete cu ajutoare în 70–80 de familii vulnerabile și la persoane cu dizabilități.",
+        "Le ducem personal, la ușa fiecăruia."
       ],
       coperta: "01.webp",
       galerie: [
-        { f: "01.webp", alt: "Voluntari împachetând pungi cu alimente" },
-        { f: "02.webp", alt: "Pungi cu alimente aranjate în rânduri" },
-        { f: "03.webp", alt: "Predarea unui pachet într-o familie" },
-        { f: "04.webp", alt: "Voluntari încărcând mașina cu pungi" },
-        { f: "05.webp", alt: "Produse de bază pregătite pentru împachetare" },
-        { f: "06.webp", alt: "Echipa de voluntari, după distribuire" }
+        { f: "01.webp", alt: "Fotografie în curând" }
       ]
     },
 
     {
-      slug: "haine-donate",
-      titlu: "Haine strânse și împărțite celor în nevoie",
-      categorii: ["familii", "copii"],
-      scurt: "Haine curate și bine îngrijite, strânse de la oameni buni și împărțite cu respect.",
+      slug: "paine-batrani",
+      titlu: "Pâine în fiecare miercuri",
+      categorii: ["hrana", "familii"],
+      scurt: "Pâine caldă, împărțită cu triciclete electrice în fiecare miercuri, la peste 400 de familii.",
       data: "",
       localitate: "",
       beneficiari: null,
-      beneficiariText: "oameni",
+      beneficiariText: "familii",
       poveste: [
-        "Oamenii ne aduc haine pe care nu le mai folosesc, iar noi le sortăm, le împăturim și le oferim mai departe, ca fiecare să poată alege cu demnitate ceea ce are nevoie.",
-        "Primim haine curate și în stare bună, mai ales pentru copii și sezonul rece."
+        "În fiecare miercuri împărțim pâine la peste 400 de familii.",
+        "Pâinea ajunge la oameni cu ajutorul tricicletelor electrice, care fac parte din proiect: cu ele împărțim pâinea în localitate, de la poartă la poartă.",
+        "Pe lângă pâine, ducem și o vorbă bună oamenilor care au nevoie."
       ],
-      coperta: "01.webp",
+      coperta: "06.webp",
       galerie: [
-        { f: "01.webp", alt: "Voluntari sortând haine donate" },
-        { f: "02.webp", alt: "Haine împăturite și aranjate pe categorii" },
-        { f: "03.webp", alt: "O mamă alege haine pentru copii" },
-        { f: "04.webp", alt: "Cutii cu haine pregătite pentru distribuire" },
-        { f: "05.webp", alt: "Haine de iarnă pentru copii" },
-        { f: "06.webp", alt: "Voluntarii după o zi de sortare" }
+        { f: "06.webp", alt: "Cele două triciclete electrice cu care împărțim pâinea" },
+        { f: "02.webp", alt: "O mamă și fetița ei, cu pâinea primită (fața copilului blurată)" },
+        { f: "03.webp", alt: "O femeie zâmbind, cu trei pâini în brațe" },
+        { f: "04.webp", alt: "O bătrână strânge la piept pâinea primită" },
+        { f: "05.webp", alt: "Un om în vârstă cu pâinea primită, pe uliță" },
+        { f: "01.webp", alt: "O femeie primește pâine caldă" },
+        { f: "07.webp", alt: "Un om cu dizabilități primește o pâine proaspătă" }
       ]
     },
 
     {
-      slug: "evenimente-copii",
-      titlu: "Evenimente și sărbători pentru copii",
+      slug: "saci-cartofi",
+      titlu: "Saci cu cartofi pentru 120 de familii",
+      categorii: ["hrana", "familii"],
+      scurt: "4.600 kg de cartofi, împărțiți la 120 de familii.",
+      data: "",
+      localitate: "",
+      beneficiari: 120,
+      beneficiariText: "familii",
+      poveste: [
+        "Am împărțit 4.600 kg de cartofi, în saci, la 120 de familii."
+      ],
+      coperta: "01.webp",
+      galerie: [
+        { f: "01.webp", alt: "Saci cu cartofi, stivuiți și pregătiți pentru distribuire" }
+      ]
+    },
+
+    {
+      slug: "incaltaminte-copii",
+      titlu: "Încălțăminte pentru copiii din Ciuflești",
       categorii: ["copii"],
-      scurt: "Sărbători cu jocuri, muzică și daruri, în care fiecare copil contează.",
+      scurt: "Încălțăm copiii din Ciuflești.",
       data: "",
       localitate: "",
       beneficiari: null,
       beneficiariText: "copii",
       poveste: [
-        "De Paști, de 1 iunie, la început de an școlar sau doar într-o sâmbătă frumoasă, organizăm sărbători pentru copii: jocuri, muzică, atelier de creație și o masă pusă cu drag.",
-        "Ne dorim ca fiecare copil să plece acasă cu amintiri frumoase și cu certitudinea că este prețuit."
+        "Am încălțat copiii din satul Ciuflești."
       ],
       coperta: "01.webp",
       galerie: [
-        { f: "01.webp", alt: "Copii dansând la o sărbătoare" },
-        { f: "02.webp", alt: "Joc de grup cu voluntarii" },
-        { f: "03.webp", alt: "Copii la masa festivă" },
-        { f: "04.webp", alt: "Atelier de creație pentru copii" },
-        { f: "05.webp", alt: "Baloane și zâmbete la eveniment" },
-        { f: "06.webp", alt: "Poză de grup la finalul sărbătorii" }
+        { f: "01.webp", alt: "Fotografie în curând" }
+      ]
+    },
+
+    {
+      slug: "gradinita",
+      titlu: "Autobuz și grupa „Mandarine” pentru grădiniță",
+      categorii: ["copii", "educatie"],
+      scurt: "Un autobuz pentru grădiniță și 2.500 $ pentru grupa „Mandarine”.",
+      data: "",
+      localitate: "",
+      beneficiari: null,
+      beneficiariText: "copii",
+      poveste: [
+        "Am sprijinit grădinița cu un autobuz pentru copii.",
+        "Pentru grupa „Mandarine” am investit 2.500 $."
+      ],
+      coperta: "01.webp",
+      galerie: [
+        { f: "01.webp", alt: "Fotografie în curând" }
+      ]
+    },
+
+    {
+      slug: "drum-salcuta",
+      titlu: "Drumul din mijlocul satului Sălcuța Nouă",
+      categorii: ["comunitate"],
+      scurt: "220 de metri de drum, în valoare de 68.000 $, pentru toți sătenii.",
+      data: "",
+      localitate: "",
+      beneficiari: null,
+      beneficiariText: "locuitori",
+      poveste: [
+        "Am amenajat drumul din mijlocul satului Sălcuța Nouă, pe o lungime de 220 de metri. Valoarea lucrării este de 68.000 $.",
+        "Un drum bun folosește fiecărei familii din sat."
+      ],
+      coperta: "01.webp",
+      galerie: [
+        { f: "01.webp", alt: "Fotografie în curând" }
+      ]
+    },
+
+    {
+      slug: "baie-om-cu-dizabilitati",
+      titlu: "Baie pentru o persoană cu dizabilități",
+      categorii: ["familii", "comunitate"],
+      scurt: "O baie construită pentru un om cu dizabilități, în valoare de peste 17.000 $.",
+      data: "",
+      localitate: "",
+      beneficiari: null,
+      beneficiariText: "persoană",
+      poveste: [
+        "Am construit o baie pentru o persoană cu dizabilități. Valoarea lucrării este de peste 17.000 $."
+      ],
+      coperta: "01.webp",
+      galerie: [
+        { f: "01.webp", alt: "Baia în timpul lucrărilor, cu gresie și faianță nouă" }
+      ]
+    },
+
+    {
+      slug: "constructie-biserici",
+      titlu: "Construcția bisericilor",
+      categorii: ["comunitate"],
+      scurt: "Biserici construite în Ciuflești, Baimaclia și Carnațenii Noi.",
+      data: "",
+      localitate: "",
+      beneficiari: null,
+      beneficiariText: "comunități",
+      poveste: [
+        "Am construit biserici în trei sate: Ciuflești, Baimaclia și Carnațenii Noi.",
+        "Sunt locuri în care comunitatea se adună, se roagă și se ajută."
+      ],
+      coperta: "01.webp",
+      galerie: [
+        { f: "01.webp", alt: "Fotografie în curând" }
+      ]
+    },
+
+    {
+      slug: "studiu-biblic",
+      titlu: "Studiu biblic în fiecare săptămână",
+      categorii: ["comunitate"],
+      scurt: "Întâlniri săptămânale, deschise tuturor, în jurul Bibliei.",
+      data: "",
+      localitate: "",
+      beneficiari: null,
+      beneficiariText: "oameni",
+      poveste: [
+        "În fiecare săptămână ne adunăm la studiu biblic.",
+        "Citim împreună, ne rugăm și ne sprijinim unii pe alții."
+      ],
+      coperta: "01.webp",
+      galerie: [
+        { f: "01.webp", alt: "Fotografie în curând" }
       ]
     }
   ]

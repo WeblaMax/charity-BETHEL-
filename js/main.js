@@ -130,8 +130,6 @@
         return '<a href="' + esc(o.sociale[n[0]]) + '" target="_blank" rel="noopener noreferrer" aria-label="' + n[1] + '">' + icon(n[0]) + '</a>';
       }).join('');
     }
-    var qr = $('#qr-box');
-    if (qr && o.qr) qr.innerHTML = '<img src="' + esc(o.qr) + '" alt="Cod QR pentru donații" loading="lazy">';
   }
 
   /* ---------- 3. Imagini: efect de „developare” (blur → clar) ---------- */
@@ -225,15 +223,16 @@
   function initCounters() {
     var ul = $('#counters'); if (!ul) return;
     ul.innerHTML = D.contoare.map(function (c) {
-      return '<li class="counter"><span class="counter__num" data-target="' + c.valoare + '">' + fmt(c.valoare) + '</span><span class="counter__label">' + esc(c.eticheta) + '</span></li>';
+      return '<li class="counter"><span class="counter__num" data-target="' + c.valoare + '" data-suffix="' + esc(c.sufix || '') + '">' + fmt(c.valoare) + (c.sufix ? esc(c.sufix) : '') + '</span><span class="counter__label">' + esc(c.eticheta) + '</span></li>';
     }).join('');
     if (!canAnimate) return;
     $$('.counter__num', ul).forEach(function (n) {
       var target = +n.getAttribute('data-target'), o = { v: 0 };
-      n.textContent = '0';
+      var sfx = n.getAttribute('data-suffix') || '';
+      n.textContent = '0' + sfx;
       ScrollTrigger.create({
         trigger: n, start: 'top 90%', once: true,
-        onEnter: function () { gsap.to(o, { v: target, duration: 2.2, ease: 'power2.out', onUpdate: function () { n.textContent = fmt(o.v); } }); }
+        onEnter: function () { gsap.to(o, { v: target, duration: 2.2, ease: 'power2.out', onUpdate: function () { n.textContent = fmt(o.v) + sfx; } }); }
       });
     });
   }
@@ -531,15 +530,12 @@
       if (!nume || !tel) { status.textContent = 'Te rugăm să completezi numele și telefonul.'; (nume ? form.telefon : form.nume).focus(); return; }
       var body = 'Nume: ' + nume + '\nTelefon: ' + tel + '\nE-mail: ' + form.email.value.trim() +
         '\nVreau să ajut: ' + form.interes.value + '\n\n' + form.mesaj.value.trim();
-      if (o.formularEndpoint) {
-        status.textContent = 'Se trimite…';
-        fetch(o.formularEndpoint, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
-          .then(function (r) { if (!r.ok) throw new Error(); status.textContent = 'Mulțumim! Te vom contacta în curând.'; form.reset(); })
-          .catch(function () { status.textContent = 'Nu s-a trimis. Te rugăm să ne suni sau să ne scrii direct.'; });
-      } else {
-        status.textContent = 'Se deschide aplicația de e-mail pentru a trimite mesajul…';
-        location.href = 'mailto:' + o.email + '?subject=' + encodeURIComponent('Vreau să devin voluntar') + '&body=' + encodeURIComponent(body);
-      }
+      /* Trimitere pe WhatsApp: se deschide chat-ul asociației cu mesajul completat */
+      var wa = 'https://wa.me/' + String(o.telefonHref).replace(/\D/g, '') + '?text=' +
+        encodeURIComponent('Vreau să devin voluntar.\n\n' + body);
+      status.textContent = 'Se deschide WhatsApp pentru a trimite mesajul…';
+      window.open(wa, '_blank', 'noopener');
+      form.reset();
     });
   }
 

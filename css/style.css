@@ -219,6 +219,45 @@ ul { margin: 0; padding: 0; list-style: none; }
 .verse blockquote em { font-family: var(--script); font-style: normal; color: var(--gold-2); font-size: 1.25em; }
 .verse cite { display: block; margin-top: 1.6rem; font-style: normal; letter-spacing: .22em; text-transform: uppercase; font-size: .85rem; color: var(--gold-2); font-weight: 700; }
 
+/* ---------- 7. Poveste la scroll ---------- */
+.story-head { padding-bottom: 2rem; }
+.story-stage { position: relative; background: var(--graphite); color: var(--ivory); overflow: hidden; }
+/* Stare implicită (fără JS/GSAP/mișcare redusă): pașii sunt stivuiți și toți vizibili */
+.story-step { display: grid; gap: 1.5rem; padding: 2.5rem 1rem; width: min(100%, var(--wrap)); margin-inline: auto; align-items: center; }
+@media (min-width: 900px) { .story-step { grid-template-columns: 1.15fr 1fr; gap: 4rem; } }
+.story-media { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 3; background: #000; box-shadow: 0 20px 50px rgba(0, 0, 0, .4); }
+.story-media > img { width: 100%; height: 100%; object-fit: cover; }
+.story-text .eyebrow { color: var(--gold-2); }
+.story-text h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.15; margin-bottom: 1rem; }
+.story-text p { color: #d9d4c9; font-size: 1.1rem; max-width: 34rem; }
+.story-quote { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 3.4vw, 2.3rem); line-height: 1.35; color: var(--ivory); margin: 0 0 1rem; border-left: 2px solid var(--gold-2); padding-left: 1.2rem; }
+.story-sign { color: var(--gold-2); font-family: var(--script); font-size: 1.8rem; }
+.story-progress { display: none; }
+/* Stare fixată (pin) */
+.story-stage.is-pinned { height: 100vh; height: 100svh; }
+.is-pinned .story-step { position: absolute; inset: 0; margin: auto; padding: 4.5rem 1rem 3.5rem; align-content: center; }
+@media (max-width: 899px) {
+  .is-pinned .story-step { grid-template-rows: minmax(0, 44%) auto; gap: 1rem; align-content: start; padding-top: 5.5rem; }
+  .is-pinned .story-media { aspect-ratio: auto; height: 100%; }
+  .story-text h3 { font-size: 1.7rem; margin-bottom: .5rem; } .story-text p { font-size: 1rem; }
+}
+.is-pinned .story-progress { display: flex; position: absolute; z-index: 5; top: 1.2rem; left: 50%; transform: translateX(-50%); gap: .6rem; align-items: center; }
+.story-progress li { display: flex; align-items: center; gap: .45rem; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(251, 248, 242, .5); transition: color .3s; }
+.story-progress li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid currentColor; transition: background .3s; }
+.story-progress li.is-active { color: var(--gold-2); } .story-progress li.is-active::before { background: var(--gold-2); }
+@media (max-width: 640px) { .story-progress li span { display: none; } }
+
+/* Slider înainte / după */
+.compare { position: absolute; inset: 0; user-select: none; -webkit-user-select: none; --pos: 50%; }
+.compare img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.compare__before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.compare__label { position: absolute; bottom: .9rem; z-index: 2; background: rgba(31, 35, 40, .72); color: var(--ivory); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .8rem; border-radius: 999px; }
+.compare__label--l { left: .9rem; } .compare__label--r { right: .9rem; }
+.compare__range { position: absolute; inset: 0; z-index: 4; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y; }
+.compare__handle { position: absolute; z-index: 3; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: var(--gold-2); box-shadow: 0 0 14px rgba(227, 184, 115, .9); pointer-events: none; }
+.compare__handle::after { content: "◂ ▸"; position: absolute; top: 50%; left: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: var(--gold-grad); color: var(--graphite); display: grid; place-items: center; font-size: .8rem; letter-spacing: -.1em; font-weight: 700; box-shadow: 0 4px 16px rgba(0, 0, 0, .4); }
+.compare__range:focus-visible ~ .compare__handle::after { outline: 3px solid var(--ivory); outline-offset: 2px; }
+
 /* ---------- 8. Proiecte ---------- */
 .cards { display: grid; gap: 1.6rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr)); }
 .card { position: relative; background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s; }
@@ -255,9 +294,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .crumbs { font-size: .9rem; margin-bottom: 1.2rem; color: var(--muted); }
 
 /* Pagina unui proiect */
-.project-cover { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16 / 8; box-shadow: var(--shadow-lg); background: var(--ivory-2); }
-@media (max-width: 640px) { .project-cover { aspect-ratio: 4 / 3; } }
-.project-cover img { width: 100%; height: 100%; object-fit: cover; }
+.project-cover { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); background: var(--ivory-2); }
+.project-cover img { display: block; width: 100%; height: auto; max-height: 78vh; object-fit: contain; margin: 0 auto; }
 .facts { display: flex; flex-wrap: wrap; gap: .8rem 1rem; margin: 1.6rem 0 0; }
 .facts li { display: flex; align-items: center; gap: .55rem; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .5rem 1.1rem; font-weight: 600; font-size: .95rem; }
 .facts .ic { color: var(--gold); }
@@ -268,11 +306,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 .side-card { background: var(--graphite); color: var(--ivory); border-radius: var(--radius); padding: 1.8rem; }
 .side-card h2 { font-family: var(--serif); font-weight: 500; font-size: 1.7rem; line-height: 1.2; margin-bottom: .6rem; }
 .side-card p { color: #d9d4c9; font-size: .98rem; }
-.gallery { display: grid; gap: .8rem; grid-template-columns: repeat(2, 1fr); }
-@media (min-width: 760px) { .gallery { grid-template-columns: repeat(3, 1fr); gap: 1rem; } .gallery li:first-child { grid-column: span 2; grid-row: span 2; } }
-.gallery button { display: block; position: relative; width: 100%; height: 100%; padding: 0; border: 0; border-radius: 14px; overflow: hidden; background: var(--ivory-2); aspect-ratio: 4 / 3; }
-.gallery li:first-child button { aspect-ratio: auto; min-height: 100%; }
-.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.gallery { column-count: 2; column-gap: .8rem; }
+@media (min-width: 760px) { .gallery { column-count: 3; column-gap: 1rem; } }
+.gallery li { break-inside: avoid; margin-bottom: .8rem; }
+@media (min-width: 760px) { .gallery li { margin-bottom: 1rem; } }
+.gallery button { display: block; position: relative; width: 100%; padding: 0; border: 0; border-radius: 14px; overflow: hidden; background: var(--ivory-2); }
+.gallery img { display: block; width: 100%; height: auto; transition: transform .6s; }
 .gallery button:hover img { transform: scale(1.05); }
 .gallery button::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 0 var(--gold-2); transition: box-shadow .3s; border-radius: inherit; }
 .gallery button:hover::after, .gallery button:focus-visible::after { box-shadow: inset 0 0 0 3px var(--gold-2); }
@@ -310,9 +349,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .iban small { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); }
 .iban code { display: block; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: clamp(1rem, 3.6vw, 1.2rem); font-weight: 700; overflow-wrap: anywhere; margin: .25rem 0 .8rem; }
 .iban-meta { font-size: .95rem; color: var(--muted); margin: 0 0 1rem; }
-.qr { aspect-ratio: 1; border: 1.5px dashed var(--gold-2); border-radius: 14px; display: grid; place-items: center; text-align: center; padding: .8rem; font-size: .85rem; color: var(--muted); background: var(--ivory); }
-.qr img { width: 100%; border-radius: 8px; }
-.qr .ic { width: 38px; height: 38px; color: var(--gold); margin: 0 auto .4rem; }
 .ways { display: grid; gap: 1.2rem; margin-top: 1.6rem; }
 @media (min-width: 760px) { .ways { grid-template-columns: repeat(3, 1fr); } }
 .way h3 { font-size: 1.45rem; }

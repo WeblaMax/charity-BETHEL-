@@ -59,6 +59,7 @@
       <div class="wrap">
         <h1 class="h1" id="hero-title">Asociația <em>BETHEL</em> – Poarta Cerului</h1>
         <p class="hero__sub">Ajutăm persoane cu dizabilități, bătrâni singuri și copii din familii vulnerabile.</p>
+        <p data-org="fondare" style="margin:-.8rem 0 1.6rem;color:var(--muted)"></p>
         <div class="hero__cta">
           <a class="btn btn--gold btn--xl" data-org-href="tel"><svg class="ic"><use href="#i-phone"/></svg>Sună: <span data-org="telefon"></span></a>
           <a class="btn btn--ghost btn--xl" data-org-href="mailto"><svg class="ic"><use href="#i-mail"/></svg>Scrie-ne</a>
@@ -75,6 +76,19 @@
       </div>
     </section>
 
+    <!-- ===================== 4. POVESTE LA SCROLL ===================== -->
+    <section id="poveste" aria-labelledby="story-title">
+      <div class="wrap story-head section">
+        <div class="section-head" style="margin-bottom:0">
+          <span class="eyebrow" id="story-eyebrow">Poveste</span>
+          <h2 class="h2" id="story-title">Casa unei mame</h2>
+          <p class="lead">Derulează și urmărește povestea, de la primul pas până la mulțumirea familiei.</p>
+        </div>
+      </div>
+      <!-- Pașii se generează din data/proiecte.js → poveste -->
+      <div class="story-stage on-dark" id="story-stage"></div>
+    </section>
+
     <!-- ===================== 3. CUM AJUȚI ===================== -->
     <section class="section section--alt" id="ajuta" aria-labelledby="help-title">
       <div class="wrap">
@@ -88,11 +102,36 @@
                 <code id="iban-text" data-org="iban"></code>
                 <button type="button" class="btn btn--dark" id="copy-iban"><svg class="ic"><use href="#i-copy"/></svg><span>Copiază</span></button>
               </div>
-              <p class="iban-meta">Beneficiar: <strong data-org="beneficiar"></strong><br>Banca: <span data-org="banca"></span></p>
+              <p class="iban-meta">Beneficiar: <strong data-org="beneficiar"></strong><br>Banca: <span data-org="banca"></span><br>BIC: <span data-org="codBanca"></span> · Valuta: MDL</p>
               <p class="sr-only" role="status" aria-live="polite" id="copy-status"></p>
             </div>
           </div>
           <p style="margin:1.2rem 0 0">Poți dărui și <strong>alimente, haine sau timp</strong> (voluntariat). <a href="#contact">Sună-ne sau scrie-ne</a> și stabilim împreună.</p>
+        </article>
+
+        <!-- Voluntariat -->
+        <article class="panel" aria-labelledby="vol-title">
+          <svg class="ic panel__icon"><use href="#i-users"/></svg>
+          <h3 id="vol-title">Devino voluntar</h3>
+          <p>Lasă-ne datele tale și te sunăm. Nu trebuie să știi să faci ceva anume – ai nevoie doar de inimă.</p>
+          <form class="form" id="volunteer-form" novalidate>
+            <div class="form-row">
+              <div class="field"><label for="v-nume">Nume și prenume *</label><input id="v-nume" name="nume" autocomplete="name" required></div>
+              <div class="field"><label for="v-tel">Telefon *</label><input id="v-tel" name="telefon" type="tel" autocomplete="tel" required></div>
+            </div>
+            <div class="field"><label for="v-email">E-mail</label><input id="v-email" name="email" type="email" autocomplete="email"></div>
+            <div class="field"><label for="v-interes">Cum vrei să ajuți?</label>
+              <select id="v-interes" name="interes">
+                <option>În teren: vizite și distribuire</option>
+                <option>Pregătirea pachetelor și sortarea hainelor</option>
+                <option>Cu copiii: tabere și evenimente</option>
+                <option>Cu meșteșuguri și renovări</option>
+                <option>Altceva</option>
+              </select></div>
+            <div class="field"><label for="v-mesaj">Câteva cuvinte (opțional)</label><textarea id="v-mesaj" name="mesaj"></textarea></div>
+            <button class="btn btn--gold" type="submit">Trimite</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
         </article>
       </div>
     </section>

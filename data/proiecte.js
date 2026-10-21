@@ -35,15 +35,15 @@ window.BETHEL = {
     },
 
     /* Donații */
-    beneficiar: "Asociația Obștească „BETHEL – Poarta Cerului”",
-    iban: "MD00 XX00 0000 0000 0000 0000",  // EXEMPLU – înlocuiește cu IBAN-ul real
-    banca: "Numele băncii",                 // EXEMPLU
-    codBanca: "",                           // cod SWIFT/BIC, dacă vrei să-l afișezi
+    beneficiar: "AO BETHEL-POARTA CERULUI",
+    iban: "MD93 AG00 0000 0225 1524 7125",
+    banca: "Moldova Agroindbank",
+    codBanca: "AGRNMD2X",                      // cod SWIFT/BIC
     qr: "",                                 // ex. "images/qr-donatie.webp" – când e gol se afișează un loc rezervat
 
     /* Date juridice (footer) */
     juridic: {
-      idno: "",                             // cod fiscal (IDNO)
+      idno: "1022620012754",                  // cod fiscal (IDNO)
       inregistrare: "",                     // ex. „Înregistrată la Ministerul Justiției, nr. …, din …”
       adresaJuridica: ""
     },

@@ -90,37 +90,36 @@ window.BETHEL = {
   poveste: {
     proiect: "casa-renovata",               // folderul cu pozele: images/proiecte/casa-renovata/
     eticheta: "Poveste din inima noastră",
-    titlu: "O casă pentru patru copii și o mamă care nu s-a dat bătută",
+    titlu: "O casă care a primit o nouă șansă",
     pasi: [
       {
         eticheta: "Înainte",
         titlu: "O familie și o casă care aștepta ajutor",
-        text: "O mamă își crește singură cei patru copii. Casa în care locuiau avea nevoie urgentă de reparații, iar puterile unui singur om nu ajungeau.",
+        text: "Casa familiei avea nevoie urgentă de reparații: pereți vechi, tavan degradat, o locuință greu de ținut caldă și curată.",
         img: "inainte.webp",
-        alt: "Casa familiei înainte de renovare"
+        alt: "Camera familiei înainte de reparații"
       },
       {
         eticheta: "Lucrările",
         titlu: "Mâini multe, o singură inimă",
-        text: "Voluntari, meșteri și donatori s-au adunat la aceeași masă și la același șantier. Fiecare a dat ce a avut: bani, materiale, timp, o vorbă bună.",
+        text: "Voluntari, meșteri și donatori s-au adunat la același șantier. Fiecare a dat ce a avut: bani, materiale, timp, o vorbă bună.",
         img: "lucrari.webp",
-        alt: "Voluntari lucrând la renovarea casei"
+        alt: "Tavan nou din plăci OSB, în timpul lucrărilor"
       },
       {
         eticheta: "După",
         titlu: "Un cămin cald și sigur",
-        text: "Trage de mijloc ca să vezi diferența. Acolo unde era grijă, acum e liniște, lumină și loc pentru jocurile copiilor.",
+        text: "Trage de mijloc ca să vezi diferența. Aceeași cameră: pereți netezi, tavan nou și o lumină care chiar încălzește.",
         img: "dupa.webp",
-        alt: "Casa familiei după renovare",
-        compara: { inainte: "inainte.webp", altInainte: "Casa înainte de renovare", altDupa: "Casa după renovare" }
+        alt: "Aceeași cameră după renovare",
+        compara: { inainte: "inainte.webp", altInainte: "Camera înainte de renovare", altDupa: "Camera după renovare" }
       },
       {
-        eticheta: "Mesajul familiei",
-        titlu: "În cuvintele lor",
-        citat: "[Mesajul familiei – de completat cu cuvintele lor, cu acordul lor]", // EXEMPLU
-        semnatura: "",                      // ex. „– Mama și cei patru copii”
+        eticheta: "Familia",
+        titlu: "Pentru ei a fost făcut totul",
+        text: "Copiii familiei, în fața casei. Le protejăm fețele, dar bucuria se vede.",
         img: "familia.webp",
-        alt: "Familia în fața casei renovate"
+        alt: "Copiii familiei în fața casei (fețe blurate)"
       }
     ]
   },
@@ -220,13 +219,16 @@ window.BETHEL = {
       beneficiariText: "familie",
       poveste: [
         "Am renovat casa unei familii vulnerabile, cu ajutorul voluntarilor și al donatorilor.",
-        "În galerie vezi starea casei înainte de reparații și familia, cu fețele copiilor protejate."
+        "În galerie vezi camerele înainte și după reparații și familia, cu fețele copiilor protejate."
       ],
-      coperta: "inainte.webp",
+      coperta: "dupa.webp",
       galerie: [
-        { f: "inainte.webp", alt: "Camera familiei înainte de reparații" },
+        { f: "inainte.webp", alt: "Camera înainte de reparații" },
+        { f: "dupa.webp", alt: "Aceeași cameră, după renovare" },
         { f: "inainte-2.webp", alt: "Altă cameră a casei, înainte de reparații" },
-        { f: "inainte-3.webp", alt: "Tavanul și pereții camerei, înainte de reparații" },
+        { f: "dupa-2.webp", alt: "Camera renovată, cu tapet nou și tavan nou" },
+        { f: "inainte-3.webp", alt: "Tavanul din plăci OSB, în timpul lucrărilor" },
+        { f: "dupa-3.webp", alt: "Colț al camerei, după renovare" },
         { f: "familia.webp", alt: "Copiii familiei, în fața casei (fețe blurate)" }
       ]
     },

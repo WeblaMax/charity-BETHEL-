@@ -210,6 +210,28 @@ window.BETHEL = {
     },
 
     {
+      slug: "casa-renovata",
+      titlu: "Casă renovată pentru o familie vulnerabilă",
+      categorii: ["familii", "copii"],
+      scurt: "Reparații la casa unei familii vulnerabile, cu ajutorul voluntarilor și al donatorilor.",
+      data: "",
+      localitate: "",
+      beneficiari: null,
+      beneficiariText: "familie",
+      poveste: [
+        "Am renovat casa unei familii vulnerabile, cu ajutorul voluntarilor și al donatorilor.",
+        "În galerie vezi starea casei înainte de reparații și familia, cu fețele copiilor protejate."
+      ],
+      coperta: "inainte.webp",
+      galerie: [
+        { f: "inainte.webp", alt: "Camera familiei înainte de reparații" },
+        { f: "inainte-2.webp", alt: "Altă cameră a casei, înainte de reparații" },
+        { f: "inainte-3.webp", alt: "Tavanul și pereții camerei, înainte de reparații" },
+        { f: "familia.webp", alt: "Copiii familiei, în fața casei (fețe blurate)" }
+      ]
+    },
+
+    {
       slug: "ghiozdane",
       titlu: "Ghiozdane pentru 15 familii vulnerabile",
       categorii: ["copii", "familii", "educatie"],

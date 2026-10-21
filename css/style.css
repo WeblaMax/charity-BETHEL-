@@ -345,14 +345,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .panel h3 { font-family: var(--serif); font-weight: 600; font-size: 1.8rem; line-height: 1.15; margin-bottom: .6rem; }
 .panel__icon { width: 40px; height: 40px; color: var(--gold); margin-bottom: .8rem; }
 .donate { display: grid; gap: 1.5rem; }
-@media (min-width: 560px) { .donate { grid-template-columns: 1fr 170px; align-items: start; } }
 .iban { background: var(--ivory); border: 1px dashed var(--gold); border-radius: 12px; padding: 1rem 1.1rem; margin: 1rem 0; }
 .iban small { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); }
 .iban code { display: block; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: clamp(1rem, 3.6vw, 1.2rem); font-weight: 700; overflow-wrap: anywhere; margin: .25rem 0 .8rem; }
 .iban-meta { font-size: .95rem; color: var(--muted); margin: 0 0 1rem; }
-.qr { aspect-ratio: 1; border: 1.5px dashed var(--gold-2); border-radius: 14px; display: grid; place-items: center; text-align: center; padding: .8rem; font-size: .85rem; color: var(--muted); background: var(--ivory); }
-.qr img { width: 100%; border-radius: 8px; }
-.qr .ic { width: 38px; height: 38px; color: var(--gold); margin: 0 auto .4rem; }
 .ways { display: grid; gap: 1.2rem; margin-top: 1.6rem; }
 @media (min-width: 760px) { .ways { grid-template-columns: repeat(3, 1fr); } }
 .way h3 { font-size: 1.45rem; }

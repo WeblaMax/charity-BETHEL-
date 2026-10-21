@@ -40,7 +40,6 @@ window.BETHEL = {
     iban: "MD93 AG00 0000 0225 1524 7125",
     banca: "Moldova Agroindbank",
     codBanca: "AGRNMD2X",                      // cod SWIFT/BIC
-    qr: "",                                 // ex. "images/qr-donatie.webp" – când e gol se afișează un loc rezervat
 
     /* Date juridice (footer) */
     juridic: {
@@ -49,9 +48,7 @@ window.BETHEL = {
       adresaJuridica: ""
     },
 
-    /* Formularul de voluntari.
-       - Dacă lași gol, formularul deschide aplicația de e-mail a vizitatorului (mailto:).
-       - Dacă pui un endpoint (ex. Formspree: "https://formspree.io/f/xxxxxxx"), mesajul se trimite direct. */
+    /* Formularul de voluntari se trimite pe WhatsApp, la numărul de telefon de mai sus. */
     formularEndpoint: ""
   },
 

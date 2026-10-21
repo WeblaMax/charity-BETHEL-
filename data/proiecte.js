@@ -93,11 +93,18 @@ window.BETHEL = {
     titlu: "O casă care a primit o nouă șansă",
     pasi: [
       {
+        eticheta: "Familia",
+        titlu: "Pentru ei a fost făcut totul",
+        text: "Copiii familiei, în fața casei. Le protejăm fețele, dar bucuria se vede.",
+        img: "familia.webp",
+        alt: "Copiii familiei în fața casei (fețe blurate)"
+      },
+      {
         eticheta: "Înainte",
         titlu: "O familie și o casă care aștepta ajutor",
-        text: "Casa familiei avea nevoie urgentă de reparații: pereți vechi, tavan degradat, o locuință greu de ținut caldă și curată.",
-        img: "inainte.webp",
-        alt: "Camera familiei înainte de reparații"
+        text: "Casa familiei avea nevoie de ajutor ca să devină cu adevărat un loc cald, sigur și îngrijit pentru copii.",
+        img: "pas-inainte.webp",
+        alt: "Una dintre camerele casei familiei"
       },
       {
         eticheta: "Lucrările",
@@ -113,13 +120,6 @@ window.BETHEL = {
         img: "dupa.webp",
         alt: "Aceeași cameră după renovare",
         compara: { inainte: "inainte.webp", altInainte: "Camera înainte de renovare", altDupa: "Camera după renovare" }
-      },
-      {
-        eticheta: "Familia",
-        titlu: "Pentru ei a fost făcut totul",
-        text: "Copiii familiei, în fața casei. Le protejăm fețele, dar bucuria se vede.",
-        img: "familia.webp",
-        alt: "Copiii familiei în fața casei (fețe blurate)"
       }
     ]
   },

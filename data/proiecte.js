@@ -25,9 +25,9 @@ window.BETHEL = {
     numeComplet: "Asociația Obștească „Bethel – Poarta Cerului”",
     fondare: "Asociația a fost înființată în 2022 de Cojocari Victor, Cojocari Iosif și Rusu Laric.",
     tara: "Republica Moldova",
-    telefon: "+373 000 00 000",            // EXEMPLU
-    telefonHref: "+37300000000",            // fără spații, pentru legătura tel:
-    email: "contact@exemplu.md",            // EXEMPLU
+    telefon: "+373 76 712 725",
+    telefonHref: "+37376712725",             // fără spații, pentru legătura tel:
+    email: "rusularic@gmail.com",
     adresa: "Strada Exemplu 1, Chișinău, Republica Moldova", // EXEMPLU
     sociale: {                              // lasă "" pentru a ascunde o rețea
       facebook: "https://www.facebook.com/",

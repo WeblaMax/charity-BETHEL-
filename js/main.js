@@ -568,7 +568,7 @@
       initCounters();
       renderStory();
       var home = $('#home-cards');
-      if (home) { renderCards(home, D.proiecte); animateCards(home); }
+      if (home) renderCards(home, D.proiecte);
       initCopyIban(); initForm(); initTransparency();
     }
     if (page === 'proiecte') initProjectsPage();

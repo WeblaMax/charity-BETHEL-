@@ -219,45 +219,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .verse blockquote em { font-family: var(--script); font-style: normal; color: var(--gold-2); font-size: 1.25em; }
 .verse cite { display: block; margin-top: 1.6rem; font-style: normal; letter-spacing: .22em; text-transform: uppercase; font-size: .85rem; color: var(--gold-2); font-weight: 700; }
 
-/* ---------- 7. Poveste la scroll ---------- */
-.story-head { padding-bottom: 2rem; }
-.story-stage { position: relative; background: var(--graphite); color: var(--ivory); overflow: hidden; }
-/* Stare implicită (fără JS/GSAP/mișcare redusă): pașii sunt stivuiți și toți vizibili */
-.story-step { display: grid; gap: 1.5rem; padding: 2.5rem 1rem; width: min(100%, var(--wrap)); margin-inline: auto; align-items: center; }
-@media (min-width: 900px) { .story-step { grid-template-columns: 1.15fr 1fr; gap: 4rem; } }
-.story-media { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 3; background: #000; box-shadow: 0 20px 50px rgba(0, 0, 0, .4); }
-.story-media > img { width: 100%; height: 100%; object-fit: cover; }
-.story-text .eyebrow { color: var(--gold-2); }
-.story-text h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.15; margin-bottom: 1rem; }
-.story-text p { color: #d9d4c9; font-size: 1.1rem; max-width: 34rem; }
-.story-quote { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 3.4vw, 2.3rem); line-height: 1.35; color: var(--ivory); margin: 0 0 1rem; border-left: 2px solid var(--gold-2); padding-left: 1.2rem; }
-.story-sign { color: var(--gold-2); font-family: var(--script); font-size: 1.8rem; }
-.story-progress { display: none; }
-/* Stare fixată (pin) */
-.story-stage.is-pinned { height: 100vh; height: 100svh; }
-.is-pinned .story-step { position: absolute; inset: 0; margin: auto; padding: 4.5rem 1rem 3.5rem; align-content: center; }
-@media (max-width: 899px) {
-  .is-pinned .story-step { grid-template-rows: minmax(0, 44%) auto; gap: 1rem; align-content: start; padding-top: 5.5rem; }
-  .is-pinned .story-media { aspect-ratio: auto; height: 100%; }
-  .story-text h3 { font-size: 1.7rem; margin-bottom: .5rem; } .story-text p { font-size: 1rem; }
-}
-.is-pinned .story-progress { display: flex; position: absolute; z-index: 5; top: 1.2rem; left: 50%; transform: translateX(-50%); gap: .6rem; align-items: center; }
-.story-progress li { display: flex; align-items: center; gap: .45rem; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(251, 248, 242, .5); transition: color .3s; }
-.story-progress li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid currentColor; transition: background .3s; }
-.story-progress li.is-active { color: var(--gold-2); } .story-progress li.is-active::before { background: var(--gold-2); }
-@media (max-width: 640px) { .story-progress li span { display: none; } }
-
-/* Slider înainte / după */
-.compare { position: absolute; inset: 0; user-select: none; -webkit-user-select: none; --pos: 50%; }
-.compare img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.compare__before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
-.compare__label { position: absolute; bottom: .9rem; z-index: 2; background: rgba(31, 35, 40, .72); color: var(--ivory); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .8rem; border-radius: 999px; }
-.compare__label--l { left: .9rem; } .compare__label--r { right: .9rem; }
-.compare__range { position: absolute; inset: 0; z-index: 4; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y; }
-.compare__handle { position: absolute; z-index: 3; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: var(--gold-2); box-shadow: 0 0 14px rgba(227, 184, 115, .9); pointer-events: none; }
-.compare__handle::after { content: "◂ ▸"; position: absolute; top: 50%; left: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: var(--gold-grad); color: var(--graphite); display: grid; place-items: center; font-size: .8rem; letter-spacing: -.1em; font-weight: 700; box-shadow: 0 4px 16px rgba(0, 0, 0, .4); }
-.compare__range:focus-visible ~ .compare__handle::after { outline: 3px solid var(--ivory); outline-offset: 2px; }
-
 /* ---------- 8. Proiecte ---------- */
 .cards { display: grid; gap: 1.6rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr)); }
 .card { position: relative; background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s; }
@@ -401,40 +362,6 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--gold); }
 .legal-list { color: #bdb8ad; }
 .footer-bottom { margin-top: 2.5rem; padding-top: 1.4rem; border-top: 1px solid rgba(255, 255, 255, .12); display: flex; flex-wrap: wrap; gap: .6rem 2rem; justify-content: space-between; font-size: .88rem; color: #aaa59a; }
 
-/* ---------- 11. Animația de deschidere ----------
-   Afișată doar când <html> are clasa .intro-on (pusă în <head> de un script mic, o singură dată pe sesiune). */
-.intro { display: none; }
-.intro-on { overflow: hidden; }
-.intro-on .intro { display: block; }
-.intro { position: fixed; inset: 0; z-index: 9999; background: var(--ivory); overflow: hidden; color: var(--graphite); }
-.intro__rays { position: absolute; left: 50%; top: 46%; width: 220vmax; height: 220vmax; margin: -110vmax 0 0 -110vmax; opacity: 0;
-  background: repeating-conic-gradient(from 0deg, rgba(227, 184, 115, .7) 0 3.5deg, transparent 3.5deg 12deg);
-  -webkit-mask-image: radial-gradient(circle, #000 0, transparent 38%); mask-image: radial-gradient(circle, #000 0, transparent 38%); }
-.intro__glow { position: absolute; inset: 0; opacity: 0; background: radial-gradient(ellipse at 50% 46%, #fff6df 0%, #f6dfae 38%, #e3b873 100%); }
-.intro__clouds { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 26vh; min-height: 120px; z-index: 6; pointer-events: none; }
-.intro__clouds path { fill: none; stroke: url(#gold); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
-.intro__stage { position: absolute; inset: 0; perspective: 1400px; z-index: 5; pointer-events: none; }
-.intro__slit { position: absolute; z-index: 4; left: 50%; top: 8%; bottom: 8%; width: 8px; margin-left: -4px; opacity: 0;
-  background: linear-gradient(180deg, transparent, #fff1cc 12%, #fff1cc 88%, transparent); box-shadow: 0 0 24px 8px rgba(227, 184, 115, .8), 0 0 80px 30px rgba(227, 184, 115, .45); border-radius: 8px; }
-.gate { position: absolute; top: 0; bottom: 0; width: calc(50% - 4px); background: var(--graphite); transform-style: preserve-3d; backface-visibility: hidden;
-  display: flex; flex-direction: column; justify-content: center; }
-.gate--l { left: 0; transform-origin: 0 50%; border-right: 2px solid #3a4048; }
-.gate--r { right: 0; transform-origin: 100% 50%; border-left: 2px solid #3a4048; }
-.gate::before, .gate::after { content: ""; position: absolute; left: 0; right: 0; height: 14px; background: #2f353c; border-block: 2px solid #3d444c; }
-.gate::before { top: 14%; } .gate::after { bottom: 14%; }
-.gate__bars { position: absolute; inset: 5% 0 5% 0; display: flex; justify-content: space-evenly; align-items: stretch; padding: 0 3%; }
-.gate__bars span { position: relative; width: clamp(5px, 1.1vw, 11px); background: linear-gradient(90deg, #3b4148, #2a2f35 60%, #3b4148); border-radius: 2px; }
-.gate__bars span::before { content: ""; position: absolute; left: 50%; top: -14px; width: 0; height: 0; margin-left: -.9em; border: .9em solid transparent; border-bottom: 1.4em solid #3b4148; border-top: 0; font-size: clamp(5px, 1vw, 9px); }
-.intro__logo { position: absolute; z-index: 3; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-bottom: 8vh; }
-.intro__cross { width: clamp(46px, 8vh, 74px); height: auto; filter: drop-shadow(0 0 18px rgba(255, 224, 150, .95)) drop-shadow(0 0 40px rgba(227, 184, 115, .8)); opacity: 0; }
-.intro__road { width: clamp(180px, 38vh, 300px); height: auto; margin-top: 4px; overflow: visible; }
-.intro__road path { fill: none; stroke: url(#gold); stroke-width: 2.6; stroke-linecap: round; }
-.intro__title { display: flex; font-family: var(--serif); font-weight: 600; font-size: clamp(2.2rem, 9vw, 4.8rem); letter-spacing: .18em; margin-right: -.18em; line-height: 1; margin-top: .6rem; color: var(--graphite); }
-.intro__title span { display: inline-block; opacity: 0; }
-.intro__script { font-family: var(--script); font-size: clamp(2rem, 7vw, 3.6rem); line-height: 1.3; color: var(--gold-deep); margin-top: .1rem; padding: 0 .4em; opacity: 0; }
-.intro__skip { position: absolute; z-index: 10; right: 1rem; top: 1rem; min-height: 44px; padding: .5rem 1.1rem; border-radius: 999px; border: 1px solid rgba(31, 35, 40, .35); background: rgba(251, 248, 242, .8); color: var(--graphite); font-size: .9rem; font-weight: 700; backdrop-filter: blur(6px); }
-.intro__skip:hover { background: var(--graphite); color: var(--ivory); }
-
 /* ---------- 12. Mișcare redusă ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -442,4 +369,42 @@ a.contact-card:hover { transform: translateY(-4px); border-color: var(--gold); }
   *, *::before, *::after { transition-duration: .01ms !important; }
   .intro { display: none !important; }
   .js-ready .develop { opacity: 1; filter: none; transform: none; }
+}
+
+/* ==========================================================================
+   VARIANTA SIMPLĂ (pentru public în vârstă): text mare, contrast mare,
+   telefonul mereu vizibil, fără animații de intrare, fără fundal în mișcare.
+   ========================================================================== */
+body.simple { font-size: 1.1875rem; line-height: 1.65; }
+.simple .ambient { display: none; }
+.simple .site-header { height: auto; padding: .55rem 0; }
+.simple .site-header .wrap { flex-wrap: wrap; row-gap: .3rem; }
+.header-call { min-height: 52px; padding: .5rem 1.2rem; font-size: 1.1rem; white-space: nowrap; }
+.simple .nav-list { flex-wrap: wrap; }
+.simple .nav-list a { font-size: 1.05rem; padding: .4rem .9rem; }
+@media (max-width: 640px) {
+  .simple .site-header .wrap > nav { order: 3; flex: 1 0 100%; }
+  .simple .nav-list { justify-content: space-between; border-top: 1px solid var(--line); padding-top: .3rem; }
+  .simple .brand small { display: none; }
+  .header-call span { font-size: 1.05rem; }
+}
+.btn--xl { min-height: 60px; padding: .9rem 2rem; font-size: 1.2rem; }
+.hero-simple { padding: clamp(2.2rem, 6vw, 4rem) 0 1.2rem; text-align: center; }
+.hero-simple .h1 { max-width: 22ch; font-size: clamp(2.2rem, 6vw, 3.8rem); }
+.hero-simple .hero__sub { margin: 1rem auto 1.8rem; font-size: 1.3rem; color: var(--graphite); }
+.simple .lead, .simple .card p, .simple .panel p { color: #3b4148; }
+.simple .card h3 { font-size: 1.7rem; }
+.simple .card p { font-size: 1.08rem; }
+.simple .cards { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+.simple .contact-card strong { font-size: 1.35rem; }
+.simple .section { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+/* Meniul rămâne mereu vizibil (doar 3 linkuri), fără buton hamburger */
+.simple .nav-toggle { display: none; }
+.simple .nav-list { position: static; inset: auto; flex-direction: row; align-items: center; gap: .1rem; background: none; padding: 0; border: 0; box-shadow: none; transform: none; opacity: 1; visibility: visible; }
+.simple .nav-list a { min-height: 48px; border-bottom: 0; }
+.header-call { margin-left: auto; }
+@media (max-width: 640px) {
+  .btn--xl { width: 100%; font-size: 1.1rem; white-space: nowrap; padding-inline: 1rem; }
+  .hero__cta { flex-direction: column; }
+  .simple .nav-list a { padding: .4rem .5rem; font-size: 1rem; }
 }
